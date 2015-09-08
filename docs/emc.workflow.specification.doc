@@ -1,0 +1,26 @@
+UI
+
+1. Each workflow item has editable on/off value.  set by owner/creator
+2. email stored in 30 day cookie.  defaults to cookie value.  
+3. frame, left is worflow object list, right is workflow edit window.  
+4. test workflow.  not sure how to do that.  may need complicated function to do line by line validation. 
+5. reset button
+6. save button
+7. wf_title = top line of edit box. large font and bold. 
+8. wf_description is second line of edit box.  normal font, blue color, bold. 
+9. wf_body 9s 3+ lines in edit box.  color is dark gray. font is normal. 
+
+
+Database
+
+workflow_table
+	wf_title (varchar 40)
+	wf_description (varchar 256)
+	wf_body (Long) 
+	wf_notification (varchar 256)
+	wf_editable (booleon)
+	
+
+
+Engine
+

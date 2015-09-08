@@ -1,0 +1,7 @@
+body {
+	background-color: silver;
+	font-family: arial, sans, sans-serif;
+   	font-size: 10pt;
+   	font-color: black; 
+}
+

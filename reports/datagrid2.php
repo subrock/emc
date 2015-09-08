@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<title>HTML 5 Example with common tags</title>
+
+<style>
+
+body {
+	background-color:#5B5C58;
+	color: #000000;
+	font-family:Calibri, Verdana, Arial, sans-serif;
+	font-size: 14px;
+	text-align:center;
+	margin:0;
+}
+
+header, footer, nav, article, section, aside
+{
+	display:inline-block;
+}
+
+header {
+	width:100%;
+	margin-bottom:10px;
+}
+
+nav {
+	width:100%;
+	background-color:#F0F8FF;
+	float:left;
+}
+
+nav ul{
+ width:100%;
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+
+nav ul li{
+ display:inline;
+ padding:3px 7px;
+}
+
+nav span{
+ float:right;
+ display:inline-block;
+}
+
+aside {
+	width:30%;
+	background-color:#B0E2FF;
+	margin:4px 2px;
+	float:right;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+article {
+	width:65%;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+section {
+	display:block;
+	background-color:#E0FFFF;
+	font-family:Cambria, Verdana, Arial, sans-serif;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	margin:5px 0px;
+	padding:10px;
+}
+
+footer {
+	width:100%;
+	background-color:#82CFFD;
+	margin-top:10px;
+	clear:both;
+}
+
+mark {
+	background-color:#FF0000;
+	font-weight:bold;
+	padding:1px;
+}
+
+#main{
+ width:960px;
+ margin:0 auto;
+ text-align:left;
+}
+
+</style>
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	function drawCanvas()
+	{
+		var canvas=document.getElementById('myCanvas');
+		var ctx=canvas.getContext('2d');
+		ctx.fillStyle='#FF0000';
+		ctx.fillRect(0,0,80,100);
+	}
+</script>
+
+</head>
+
+<body>
+<div id="main">
+
+	   <!-- header tag -->
+	   <header>
+		<h1>&lt;header&gt; - Defines a header for a section or page</h1>
+		<mark>Check this with Firefox 3.5+, if you find any prob for any tag, please check with opera latest version then</mark>
+	   </header>
+
+	  <nav>
+		<p>&lt;nav&gt; - Defines navigation links</p>
+		<ul>
+			<li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li>
+		</ul>
+		<span>
+		<time>10:00</time>
+		&lt;time&gt; - Defines a date/time
+		</span>
+
+	  </nav>
+
+	  <article> 
+
+		 <p>&lt;article&gt; - Defines an article</p>
+
+		 <section>
+		 <p>&lt;section&gt; - Defines a section</p>
+		 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum fermentum quam, sit amet consequat sapien accumsan ac. Quisque viverra, enim at placerat sodales, nisl mi venenatis mi, non</p>
+	     <p>
+		 &lt;video&gt; - Defines a video<br />
+		   <video src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" controls poster="poster.jpg" width="320" height="240">
+					<a href="http://v2v.cc/~j/theora_testsuite/320x240.ogg">Download movie</a>
+		   </video>
+		 </p> 
+
+		 </section>
+
+		 <section>
+			<figure>
+		   <dt>&lt;figure&gt; - Defines a group of media content, and their caption</dt>
+		   <dd>
+			&lt;audio&gt; - Defines sound content<br />
+			&lt;source&gt; - tag defines media resources for media elements<br />
+		   <audio controls>
+		   <source src="http://www.mediacrafters.org/files/zugzug.wav">
+
+				<a href="http://www.mediacrafters.org/files/zugzug.wav">Download song</a>
+		   </audio>
+		   </dd>
+		   </figure>
+
+		 </section>
+
+		 <section>
+			<p>
+			&lt;embed&gt; - defines embedded content, such as a plug-in.<br />
+			<embed src="http://www.mediacrafters.org/files/zugzug.wav" />
+			</p>
+		 </section>
+
+		 <section>
+		 &lt;command&gt; - 	Defines a command button
+		 <p>
+		 is this article helpfull?
+		 <command type="radio" radiogroup="poll">Yes</command>
+		 </p>
+
+		 </section>
+
+		 <section>
+		 &lt;dialog&gt; - Defines a dialog (conversation)<br />
+			<dialog>
+			  <dt>Sam</dt>
+			  <dd>Knock, Knock.</dd>
+			  <dt>Eric</dt>
+			  <dd>Who's there?</dd>
+			  <dt>Sam</dt>
+			  <dd>Justin.</dd>
+			  <dt>Eric</dt>
+			  <dd>Justin who?</dd>
+			  <dt>Sam</dt>
+			  <dd>Justin time for dinner!</dd>
+			</dialog>
+
+		</section>
+
+	   <section>
+	   &lt;meter&gt; - defines a measurement. Used only for measurements with a known minimum and maximum value.<br />
+<p>Your score is: <meter min="0" max="10">2 out of 10</meter></p>
+	   </section>
+
+	   <section>
+		&lt;datagrid&gt; - defines a list of selectable data. The datagrid is displayed as a tree-list.<br />
+	   <datagrid>
+			 <ol>
+			  <li> (datagrid row 0) </li>
+			  <li> (datagrid row 1)
+			   <ol style="list-style-type:lower-alpha;">
+				<li> (datagrid row 1,0) </li>
+				<li> (datagrid row 1,1) </li>
+			   </ol>
+			  </li>
+			  <li> (datagrid row 2) </li>
+			 </ol>
+			</datagrid>
+
+	   </section>
+
+	   <section>
+	   &lt;datalist&gt; - defines a list of selectable data.<br />	   
+
+			<input id="myCar" list="cars" />
+			<datalist id="cars">
+			<option value="BMW">
+			<option value="Ford">
+			<option value="Volvo">
+			<option value="Porche">
+			</datalist>
+	   </section>
+
+	   <section>
+	   &lt;details&gt; - defines details of an element, which the user can see, and click to hide.
+
+	   <details open="false">
+			<dt>Should be open</dt>
+			<dd><p>and you should be able to see this para!</p></dd>
+	   </details>
+		<p><mark>there are few issues with this tag, i'm not clear though, <a href="http://remysharp.com/demo/details.html">here</a> is a reference</mark></p>
+	   </section> 
+
+	   <section>
+	   &lt;command&gt; - defines a command button, like a radiobutton, a checkbox, or a button.
+	   <mark>sorry, don't have any example at this moment, if you have - dont forget to get back to me <img src="http://s1.wp.com/wp-includes/images/smilies/icon_wink.gif?m=1303243861g" alt=";)" class="wp-smiley"> </mark>
+	   </section>
+
+	   <section>
+	   &lt;datatemplate&gt; - defines a container for data template<br />
+	   &lt;rule&gt; - defines the rules for updating a datatemplate<br />
+	   &lt;nest&gt; - defines a nestingpoint in a datatemplate for child elements<br />
+
+		<mark>i found only one example <a href="http://philip.html5.org/demos/datatemplate/experimental/002.html">here</a> which is not completed!</mark>
+
+	   </section>
+
+	   <section>
+	   &lt;event-source&gt; - defines a source for events sendt by a server
+	   Found examples <a href="http://tc.labs.opera.com/html/event-source/">here</a> - i don't know well, pardon me!
+	   </section>
+
+	   <section>
+	   &lt;output&gt; - defines different types of output, such as output written by a script.
+	   <mark>Sorry, dont have the details now.</mark>
+	   </section> 
+
+	  </article>
+
+		<aside>
+			&lt;aside&gt;
+			<p>Defines content aside from the page content</p>
+			<p>&lt;canvas&gt; - defines graphic, such as graphs or other images. </p>
+			<canvas id="myCanvas" onclick="javascript:drawCanvas();">your browser does not support the canvas tag </canvas>
+			<p><mark>PLEASE CLICK ABOVE TO SEE WHAT COMES</mark>
+			&lt;mark&gt; - Defines marked text
+			</p>
+	    </aside>
+
+	   <footer>
+		<p> &lt;footer&gt; - Defines a footer for a section or page</p>
+	   </footer>
+
+</div>
+</body>
+</html>
+

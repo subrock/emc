@@ -1,0 +1,7 @@
+body {
+	background-color: #FFF8F0; 
+	#font-family: Helvetica, sans, sans-serif;
+   	font-size: 10pt;
+   	font-color: black; 
+}
+

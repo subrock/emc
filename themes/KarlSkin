@@ -1,0 +1,27 @@
+body {
+	background-color: #E8E8E8; 
+	font-family: verdana;
+   	font-size: 10pt;
+   	font-color: #808080; 
+}
+
+hr {
+color: silver;
+background-color: #700000;
+height: 5px;
+}
+
+.stylebox {border-style: solid; } 
+
+.data {
+	background-color: black;
+        font-family: system;
+	border-size: 0pt;
+        font-size: 10pt;
+        color: 00CC00;
+
+}
+a:link {color: #000000; text-decoration: none } /* unvisited link */
+a:visited {color: #000000} /* visited link */
+a:hover {color: #000000; text-decoration: underline} /* mouse over link */
+a:active {color: #0000FF} /* selected link */

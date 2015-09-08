@@ -1,0 +1,1 @@
+echo "checkin config service."

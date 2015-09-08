@@ -1,0 +1,1 @@
+<a target=_top href=./index.php?themes=<? echo "$setting_themes_name"; ?>>Dashboard</a> | <a target=_top href=administration/>Administration</a> | <a href=reports/>Reports</a> | <a href=workflows/>Workflows</a>
