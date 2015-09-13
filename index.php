@@ -1,6 +1,6 @@
+
 <? include("settings.php"); ?>
 <? include("server_header.php"); ?>
-<? include("functions.php"); ?>
 <html>
 <head>
 <title>Environment Management Console - <? echo $setting_content_name; ?></title>
@@ -8,13 +8,19 @@
 <link rel="stylesheet" type="text/css" href="tabs/ajaxtabs.css" />
 <script type="text/javascript" src="tabs/ajaxtabs.js"></script>
 <script type="text/javascript" src="tabs/tooltip.js"></script>
+<link rel="stylesheet" href="themes/Default.inc" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 <? if ( $setting_themes_enabled == 1 ) { ?>
 <link rel="stylesheet" href="themes/<? echo $setting_themes_name; ?>" type="text/css" />
+<? include('themes/'.$setting_themes_name.'.inc'); ?>
 <? } ?>
+
+<? include("functions.php"); ?>
+
+
 </head>
 <body>
-
 <!-- Header -->
 <table height=100% width=100% border=0><tr><td valign=top>
 	<table width=100% border=0><tr>
@@ -68,22 +74,22 @@ countries.init()
 
 </script>
 <!-- TAB Body Stop Here -->
-
+<? include('themes/'.$_COOKIE['theme_name'].'.inc'); ?>
 </td></tr><tr><td valign=bottom>
 <table border=0 cellspacing=0 cellpadding=0 bordercolor=black><tr>
-<td><img src=onlin.jpg broder=0>
+<td><img src=<? echo $a1pic; ?> broder=0>
 </td>
 <td>Indicates server is on-line and is listening to that port indicating the service is up.
 </td>
 </tr>
 <tr>
-<td><img src=offlin.jpg broder=0>
+<td><img src=<? echo $a2pic; ?> broder=0>
 </td>
 <td>Indicates server on-line but not listening at that port indicating the service is down.
 </td>
 </tr>
 <tr>
-<td><img src=notres.jpg broder=0>
+<td><img src=<? echo $a3pic; ?> broder=0>
 </td>
 <td>Indicates server is not responding.  Server is either behind a firewall or off-line.
 </td>

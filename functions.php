@@ -63,16 +63,17 @@ if (empty($port)){
     $port = 80;
         }
 
+include('themes/'.$_COOKIE['theme_name'].'.inc');
 $churl = @fsockopen(server($addr), $port, $errno, $errstr, 1);
 if (!$churl){
         if ( "$errstr" == "Connection refused" ) {
-                return "offlin.jpg";
+                return "src=$a2pic";
         } else {
-                return "notres.jpg";
+                return "src=$a3pic";
         }
 }
 else {
-        return "onlin.jpg";
+        return "src=$a1pic";
 }
 }
 
@@ -178,12 +179,12 @@ $type_name = get_type($type_id,"type_name");
 $port_res = piclive($server_host.":".$type_port);
 
 if ( "$type_port" == "443" ) {
-echo "<a HREF=javascript:void(0) onclick=window.open('simple_view.php?host=$server_host&port=$type_port','welcome','resizable=yes,menubar=no,status=no,location=no,toolbar=no,scrollbars=yes')><img width=15 height=15 src=$port_res border=0 title='$server_host:$type_port' /></a>";
+echo "<a HREF=javascript:void(0) onclick=window.open('simple_view.php?host=$server_host&port=$type_port','welcome','resizable=yes,menubar=no,status=no,location=no,toolbar=no,scrollbars=yes')><img width=15 height=15 $port_res border=0 title='$server_host:$type_port' /></a>";
 }
 if ( "$type_port" == "22" ) {
-echo "<a HREF=javascript:void(0) onclick=window.open('https://emc.subrock.org:4200','welcome','resizable=yes,menubar=no,status=no,location=no,toolbar=no,scrollbars=yes')><img width=15 height=15 src=$port_res border=0 title='$server_host:$type_port' /></a>";
+echo "<a HREF=javascript:void(0) onclick=window.open('goto.php?host=$server_host','welcome','resizable=yes,menubar=no,status=no,location=no,toolbar=no,scrollbars=yes')><img width=15 height=15 $port_res border=0 title='$server_host:$type_port' /></a>";
 } else {
-echo "<img width=15 height=15 src=$port_res border=0 title=$server_host:$type_port>";
+echo "<img width=15 height=15 $port_res border=0 title=$server_host:$type_port>";
 }
 if ( $t < $numt-1  ) {
   echo "";
